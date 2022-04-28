@@ -4,5 +4,9 @@ class Person:
         self.name=name
         self.city=city
     
+
+    def serialize(self):
+        return {'sno':self.sno,'name':self.name,'city':self.city}
+        
     def __repr__(self):
-        return str({'sno':self.sno,'name':self.name,'city':self.city})
+        return str(self.serialize())
