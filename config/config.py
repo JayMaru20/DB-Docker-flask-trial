@@ -4,7 +4,7 @@ import os
 
 app=Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI']="mysql://root:jay1234@localhost/sre"
+app.config['SQLALCHEMY_DATABASE_URI']=os.environ["DB_URL"]
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 db=SQLAlchemy(app)
